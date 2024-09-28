@@ -1,4 +1,7 @@
 package Model;
 
-public record AuxiliarVuelo() {
+import lombok.Data;
+
+@Data
+public class AuxiliarVuelo {
 }

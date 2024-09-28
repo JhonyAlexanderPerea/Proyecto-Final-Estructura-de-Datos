@@ -1,4 +1,5 @@
 package Model;
 
-public class Tripulante {
+public abstract class Tripulante {
+    private String estudiosRealizados;
 }
