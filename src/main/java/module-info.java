@@ -1,8 +1,7 @@
 module com.example.proyectofinalestructuradedatos {
     requires javafx.controls;
     requires javafx.fxml;
+    requires static lombok;
 
 
-    opens com.example.proyectofinalestructuradedatos to javafx.fxml;
-    exports com.example.proyectofinalestructuradedatos;
 }
