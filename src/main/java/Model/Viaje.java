@@ -1,7 +1,9 @@
 package Model;
 
-import java.util.Date;
+import lombok.Data;
 
+import java.util.Date;
+@Data
 public class Viaje {
     private static final String ORIGEN = "CDMX";
     private static String destino;
