@@ -1,4 +1,7 @@
 package Model;
 
-public record Piloto() {
+import lombok.Data;
+
+@Data
+public class Piloto extends Tripulante{
 }

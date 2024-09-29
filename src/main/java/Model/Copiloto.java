@@ -1,4 +1,7 @@
 package Model;
 
-public class Copiloto {
+import lombok.Data;
+
+@Data
+public class Copiloto extends Tripulante {
 }
