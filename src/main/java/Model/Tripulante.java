@@ -1,5 +1,5 @@
 package Model;
 
-public abstract class Tripulante {
+public abstract class Tripulante extends Persona{
     private String estudiosRealizados;
 }
