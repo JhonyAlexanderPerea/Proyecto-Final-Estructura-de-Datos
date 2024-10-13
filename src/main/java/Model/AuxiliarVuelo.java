@@ -3,5 +3,5 @@ package Model;
 import lombok.Data;
 
 @Data
-public class AuxiliarVuelo {
+public class AuxiliarVuelo extends Tripulante{
 }
