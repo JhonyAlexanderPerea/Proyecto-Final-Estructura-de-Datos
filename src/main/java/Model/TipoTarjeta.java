@@ -1,5 +1,6 @@
 package Model;
 
 public enum TipoTarjeta {
-    DEBITO, CREDITO;
+    DEBITO,
+    CREDITO;
 }
