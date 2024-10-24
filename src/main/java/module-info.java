@@ -6,5 +6,5 @@ module app {
     requires java.logging;
 
     exports app;
-    exports Controller;
+    exports controller;
 }
