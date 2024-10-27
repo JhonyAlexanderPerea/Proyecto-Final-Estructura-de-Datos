@@ -7,4 +7,6 @@ module app {
 
     exports app;
     exports controller;
+    opens controller to javafx.fxml;
+
 }
