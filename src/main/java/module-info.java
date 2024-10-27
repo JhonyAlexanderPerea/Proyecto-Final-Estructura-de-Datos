@@ -5,6 +5,8 @@ module app {
     requires java.desktop;
     requires java.logging;
 
+    opens controller to javafx.fxml;
+
     exports app;
     exports controller;
 }

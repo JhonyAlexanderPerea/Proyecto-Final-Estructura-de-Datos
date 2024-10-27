@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaLogin">
    <children>
       <Text layoutX="38.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INICIAR SESIÓN">
          <font>
@@ -46,7 +46,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnRegistrate" layoutX="191.0" layoutY="507.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="142.0" style="-fx-background-color: green;" text="REGÍSTRATE" textFill="WHITE">
+      <Button fx:id="btnRegistrate" layoutX="191.0" layoutY="507.0" mnemonicParsing="false" onAction="#abrirVentanaRegistro" prefHeight="36.0" prefWidth="142.0" style="-fx-background-color: green;" text="REGÍSTRATE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
