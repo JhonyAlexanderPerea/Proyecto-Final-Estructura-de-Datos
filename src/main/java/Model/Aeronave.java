@@ -1,5 +1,6 @@
 package Model;
 
+import enums.TipoAeronave;
 import lombok.Data;
 
 import java.util.LinkedList;
