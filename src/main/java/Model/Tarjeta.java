@@ -1,5 +1,6 @@
 package Model;
 
+import enums.TipoTarjeta;
 import lombok.Data;
 
 @Data

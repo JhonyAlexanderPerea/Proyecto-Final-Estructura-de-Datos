@@ -1,4 +1,4 @@
-package Model;
+package enums;
 
 public enum TipoTarjeta {
     DEBITO,
