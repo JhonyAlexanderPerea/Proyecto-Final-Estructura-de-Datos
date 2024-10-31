@@ -9,4 +9,5 @@ public class Pago {
     private int cantTiquetes;
     private String medioPago;
     private String codigoPago;
+
 }
