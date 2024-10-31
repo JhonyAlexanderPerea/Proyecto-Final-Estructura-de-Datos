@@ -7,11 +7,16 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import util.Persistencia;
 
+import java.awt.image.TileObserver;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class ControllerVentanaRegistrar {
 
-   // private Persistencia persistencia = new Persistencia();
+    private Persistencia persistencia = new Persistencia();
+
+    ArrayList<String> informacion = new ArrayList<>();
+
     @FXML
     private Button btnRegistrar;
 
@@ -29,7 +34,13 @@ public class ControllerVentanaRegistrar {
 
     @FXML
     void registrarUsuario(ActionEvent event) {
-        //persistencia.escribirArchivo();
+        if (txtCorreo.getText() != "" && txtContrasenia.getText() != "" && txtId.getText() != "" && txtNombre.getText() != "")
+        {
+            /* TODO */
+         System.out.println("Usuario registrado");
+        }
+
+
     }
 
 }
