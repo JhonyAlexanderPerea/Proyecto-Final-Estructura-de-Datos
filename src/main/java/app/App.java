@@ -17,6 +17,6 @@ public class App extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/View/VentanaCompra.fxml"));
         primaryStage.setTitle("Uniquindio Airlines");
         primaryStage.setScene(new Scene(root));
-        primaryStage.show();//Prueba
+        primaryStage.show();//Prueba2
     }
 }
