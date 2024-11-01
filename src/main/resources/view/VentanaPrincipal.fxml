@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.VentanaPrincipal"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style/Styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaPrincipal">
+   <children>
+      <Pane layoutY="100.0" prefHeight="61.0" prefWidth="1200.0" style="-fx-background-color: green;" />
+      <ImageView fitHeight="225.0" fitWidth="289.0" layoutX="456.0" layoutY="-65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/1729820977042.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-2.0" layoutY="161.0" prefHeight="541.0" prefWidth="268.0" style="-fx-background-color: #3daf23;">
+         <children>
+            <Hyperlink layoutX="114.0" layoutY="498.0" text="Salir" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Hyperlink>
+            <Label fx:id="labelTripulante" layoutY="47.0" onMouseClicked="#abrirVentanaTripulante" prefHeight="61.0" prefWidth="268.0" styleClass="label-boton" text="           TRIPULANTE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="labelTripulante1" layoutY="114.0" prefHeight="61.0" prefWidth="268.0" styleClass="label-boton" text="           VENTANA 2" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="labelTripulante11" layoutY="184.0" prefHeight="61.0" prefWidth="268.0" styleClass="label-boton" text="           VENTANA 3" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="labelTripulante111" layoutY="255.0" prefHeight="61.0" prefWidth="268.0" styleClass="label-boton" text="           VENTANA 4" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

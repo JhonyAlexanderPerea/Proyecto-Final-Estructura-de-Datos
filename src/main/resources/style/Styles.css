@@ -1,0 +1,9 @@
+.label-boton {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}
+
+.label-boton:hover {
+    -fx-background-color: green;
+}
