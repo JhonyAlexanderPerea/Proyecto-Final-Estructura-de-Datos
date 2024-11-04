@@ -7,3 +7,7 @@
 .label-boton:hover {
     -fx-background-color: green;
 }
+
+.table-view .column-header-background {
+    -fx-background-color: green;
+}
