@@ -33,7 +33,7 @@ public class Embarque {
                 colaCarrosEmbarque.ponerFrente(carro);
                 logger.info("Carro agregado al frente con éxito");
             }
-            else
+            else if (carro != null && opcion.toLowerCase().equals("final"))
             {
                 colaCarrosEmbarque.ponerFinal(carro);
                 logger.info("Carro agregado al final con éxito");
@@ -105,6 +105,18 @@ public class Embarque {
             {
                 logger.warn("El carro de embarque seleccionado no se encuentra en la cola: {}", id);
             }
+        }
+    }
+
+    public void confirmarSalida (carroEmbarque carro)
+    {
+        if (carro.getPesoTransportado() == 500)
+        {
+            retirarCarro(carro.getId());
+        }
+        else
+        {
+            logger.warn("El carro aún " + carro.getId() + "no está lleno.");
         }
     }
 
