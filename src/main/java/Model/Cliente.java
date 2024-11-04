@@ -1,7 +1,10 @@
 package Model;
 
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
 public class Cliente extends Persona{
     private String apellido;
     private String direccionResidencia;

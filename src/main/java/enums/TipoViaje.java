@@ -1,4 +1,4 @@
-package Model;
+package enums;
 
 public enum TipoViaje {
     SOLO_IDA,
