@@ -1,46 +1,34 @@
 package controller;
 
-import javafx.event.ActionEvent;
+import javafx.scene.control.Hyperlink;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import util.Persistencia;
-
-import java.awt.image.TileObserver;
-import java.util.ArrayList;
-import java.util.Objects;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class ControllerVentanaRegistrar {
 
-    private Persistencia persistencia = new Persistencia();
-
-    ArrayList<String> informacion = new ArrayList<>();
-
     @FXML
-    private Button btnRegistrar;
+    private Hyperlink linkVolverLogin; // Hyperlink para volver a la ventana de inicio de sesión
 
+    // Método que se ejecuta al hacer clic en el hyperlink "Inicia sesión aquí"
     @FXML
-    private PasswordField txtContrasenia;
+    void onLinkVolverLoginClick(MouseEvent event) {
+        try {
+            // Carga la ventana de inicio de sesión
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaLogin.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Iniciar sesión"); // Título de la ventana de inicio de sesión
+            stage.show();
 
-    @FXML
-    private TextField txtCorreo;
-
-    @FXML
-    private TextField txtId;
-
-    @FXML
-    private TextField txtNombre;
-
-    @FXML
-    void registrarUsuario(ActionEvent event) {
-        if (txtCorreo.getText() != "" && txtContrasenia.getText() != "" && txtId.getText() != "" && txtNombre.getText() != "")
-        {
-            /* TODO */
-         System.out.println("Usuario registrado");
+            // Cierra la ventana de registro
+            ((Stage) linkVolverLogin.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace(); // Imprimir errores en caso de fallar la carga
         }
-
-
     }
-
 }

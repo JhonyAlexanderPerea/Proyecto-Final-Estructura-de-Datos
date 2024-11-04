@@ -1,5 +1,6 @@
 package app;
 
+import Model.Equipaje;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,9 +14,9 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/VentanaLogin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/VentanaPrincipal.fxml"));
         primaryStage.setTitle("Uniquindio Airlines");
         primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+        primaryStage.show(); //Prueba3
     }
 }
