@@ -2,6 +2,8 @@ package Model;
 
 
 import lombok.Data;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import util.BicolaUtil;
 
 import java.util.ArrayList;
@@ -16,6 +18,7 @@ public class carroEmbarque {
     private static final int capacidadMaxima = 500;
     private String tipoEquipaje ;
     private Aeronave aeronaveAsignada;
+    private static final Logger logger = LogManager.getLogger(carroEmbarque.class);
 
     public carroEmbarque(String id) {
        this.listaEquipaje = new ArrayList<>();
@@ -25,14 +28,14 @@ public class carroEmbarque {
 
     private void cargarEquipaje (Equipaje equipaje)
     {
-        if (equipaje != null && equipaje.getPeso() + pesoTransportado <= capacidadMaxima)
+        if (equipaje != null && equipaje.getPeso() + pesoTransportado < capacidadMaxima)
         {
             listaEquipaje.add(equipaje);
             pesoTransportado = equipaje.getPeso() + pesoTransportado;
         }
         else
         {
-            System.err.println("El equipaje excede el peso máximo.");
+            logger.error("El equipaje excede el peso máximo.");
         }
     }
 

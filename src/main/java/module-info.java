@@ -5,6 +5,7 @@ module app {
     requires java.desktop;
     requires jakarta.mail;
     requires org.apache.logging.log4j;
+    requires org.apache.logging.log4j.core;
 
     opens controller to javafx.fxml;
 
