@@ -7,8 +7,6 @@ module app {
     requires org.apache.logging.log4j;
     requires org.apache.logging.log4j.core;
 
-    opens controller to javafx.fxml;
-
     exports app;
     exports controller;
     opens controller to javafx.fxml;
