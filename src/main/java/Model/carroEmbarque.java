@@ -2,6 +2,7 @@ package Model;
 
 
 import lombok.Data;
+import util.BicolaUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +10,11 @@ import java.util.List;
 @Data
 public class carroEmbarque {
 
+    private List<Equipaje> listaEquipaje;
     private String id;
     private double pesoTransportado;
     private static final int capacidadMaxima = 500;
     private String tipoEquipaje ;
-    private List<Equipaje> listaEquipaje;
     private Aeronave aeronaveAsignada;
 
     public carroEmbarque(String id) {
