@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="617.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaPerfilTripulante">
+   <children>
+      <ImageView fitHeight="49.0" fitWidth="45.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/1730417288980.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="67.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil Tripulante" wrappingWidth="369.9609375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Separator layoutY="68.0" prefHeight="8.0" prefWidth="1200.0" />
+      <Button fx:id="btnGuardar" layoutX="1096.0" layoutY="21.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Guardar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="1000.0" layoutY="21.0" mnemonicParsing="false" onAction="#regresarVentanaTripulante" prefHeight="32.0" prefWidth="90.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Cancelar" textFill="#00ff55">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="23.0" layoutY="96.0" prefHeight="490.0" prefWidth="405.0" style="-fx-background-color: eeeeee; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="22.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Icon%20persona%20verde.png" />
+               </image>
+            </ImageView>
+            <Text fill="#399053" layoutX="52.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información" wrappingWidth="106.3125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre(s)" />
+            <TextField layoutX="147.0" layoutY="102.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <Text layoutX="35.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido(s)" />
+            <TextField layoutX="147.0" layoutY="152.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <Text layoutX="35.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificación" />
+            <TextField layoutX="147.0" layoutY="202.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <TextField layoutX="147.0" layoutY="252.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <Text layoutX="35.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo Electrónico" />
+            <TextField layoutX="147.0" layoutY="306.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <Text layoutX="35.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección" />
+            <DatePicker layoutX="149.0" layoutY="360.0" prefHeight="27.0" prefWidth="237.0" style="-fx-border-radius: 0; -fx-border-color: d5d3d3;" />
+            <Text layoutX="35.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Nacimiento" />
+            <Text layoutX="33.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estudios Realizados" />
+            <TextField layoutX="149.0" layoutY="411.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+         </children>
+      </AnchorPane>
+      <TableView layoutX="443.0" layoutY="172.0" prefHeight="412.0" prefWidth="742.0" styleClass="column-header-background" stylesheets="@../style/Styles.css">
+        <columns>
+          <TableColumn prefWidth="113.0" text="Tipo" />
+          <TableColumn prefWidth="107.0" text="ID" />
+            <TableColumn prefWidth="166.0" text="Nombre completo" />
+            <TableColumn prefWidth="180.0" text="Dirección" />
+            <TableColumn minWidth="0.0" prefWidth="175.0" text="Email" />
+        </columns>
+      </TableView>
+      <Text fill="#399053" layoutX="710.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tripulantes Disponibles" wrappingWidth="208.3125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="136.0" fitWidth="56.0" layoutX="1120.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Icon%20tripulante.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

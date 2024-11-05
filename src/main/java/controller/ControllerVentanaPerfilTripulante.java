@@ -5,13 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.Node;
+import javafx.event.ActionEvent;
 import java.io.IOException;
 
-public class ControllerVentanaPrincipal {
+public class ControllerVentanaPerfilTripulante {
 
     @FXML
-    private void abrirVentanaTripulante(MouseEvent event) {
+    private void regresarVentanaTripulante(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaTripulante.fxml"));
             Parent root = loader.load();
@@ -21,8 +22,8 @@ public class ControllerVentanaPrincipal {
             stage.setScene(new Scene(root));
             stage.show();
 
-            Stage stagePrincipal = (Stage) ((Parent) event.getSource()).getScene().getWindow();
-            stagePrincipal.close();
+            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stageActual.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

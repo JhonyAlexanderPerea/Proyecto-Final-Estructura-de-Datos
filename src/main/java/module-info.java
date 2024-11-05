@@ -3,9 +3,9 @@ module app {
     requires javafx.fxml;
     requires static lombok;
     requires java.desktop;
-    requires java.logging;
-    requires java.mail;
     requires jakarta.mail;
+    requires org.apache.logging.log4j;
+    requires org.apache.logging.log4j.core;
 
     exports app;
     exports controller;
