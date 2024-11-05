@@ -4,10 +4,13 @@ import lombok.Data;
 
 @Data
 public class Pago {
+    private Cliente cliente;
     private double monto;
     private Tiquete listaTiquetes;
     private int cantTiquetes;
     private String medioPago;
     private String codigoPago;
+
+
 
 }
