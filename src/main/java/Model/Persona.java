@@ -21,4 +21,9 @@ public  abstract class Persona {
         this.email = email;
         this.fechaNacimiento = fechaNacimiento;
     }
+
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
 }
