@@ -4,35 +4,36 @@ import lombok.Data;
 
 @Data
 public class Equipaje {
-    private int peso;
-    private int ancho;
-    private int alto;
-    private int largo;
-    private int dimension;
+    private double peso;
+    private double ancho;
+    private double alto;
+    private double largo;
+    private double dimension;
+    private  boolean esEquipajeMano;
 
-    public Equipaje(int peso, int ancho, int alto, int largo) {
+    public Equipaje(double peso, double ancho, double alto, double largo, boolean esEquipajeMano) {
         this.peso = peso;
         this.ancho = ancho;
         this.alto = alto;
         this.largo = largo;
         this.dimension = largo + ancho + alto;
+        this.esEquipajeMano = esEquipajeMano;
+    }
+
+    public static boolean esEquipajeDeManoValido(double dimesion) {
+        return dimesion <= 110; // Validación para el equipaje de mano
     }
 
     public boolean esValido(boolean esNacional, boolean esEjecutivo) {
-        if (esNacional) {
-            if (esEjecutivo) {
-                return peso <= 34 && getDimension() <= 170;
-            } else {
-                return peso <= 24 && getDimension() <= 170;
-            }
+        if (esEquipajeMano) {
+            return esEquipajeDeManoValido(dimension);
         } else {
-            if (esEjecutivo) {
-                return peso <= 34 && getDimension() <= 170;
-            } else {
-                return peso <= 24 && getDimension() <= 170;
-            }
+            double pesoLimite = (esNacional) ? (esEjecutivo ? 34 : 24) : (esEjecutivo ? 34 : 24);
+            return peso <= pesoLimite && getDimension() <= 170;
         }
     }
+
+
 
     public double calcularSobrepesoCosto(double limitePeso) {
         double sobrepeso = peso - limitePeso;
@@ -43,6 +44,8 @@ public class Equipaje {
         }
         return 0; 
     }
+
+
 
 
 }

@@ -1,8 +1,10 @@
 package Model;
 
+import enums.ServicioViaje;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class Cliente extends Persona{
@@ -10,17 +12,26 @@ public class Cliente extends Persona{
     private String direccionResidencia;
     private boolean viajaMascota;
     private Mascota mascota;
-    private Equipaje equipaje;
+    private List<Equipaje> equipajes;
     private Tarjeta tarjeta;
+    private ServicioViaje servicioViaje;
 
-
-    public Cliente(String id, String nombre, String direccion, String email, Date fechaNacimiento, String apellido, String direccionResidencia, boolean viajaMascota, Mascota mascota, Equipaje equipaje, Tarjeta tarjeta) {
-        super(id, nombre, direccion, email, fechaNacimiento);
+    public Cliente(String nombre, String apellido, String direccionResidencia, boolean viajaMascota,
+                   Mascota mascota, List<Equipaje> equipaje, Tarjeta tarjeta, ServicioViaje servicioViaje) {
+        super(nombre);
         this.apellido = apellido;
         this.direccionResidencia = direccionResidencia;
         this.viajaMascota = viajaMascota;
         this.mascota = mascota;
-        this.equipaje = equipaje;
+        this.equipajes = equipaje;
         this.tarjeta = tarjeta;
+        this.servicioViaje = servicioViaje;
     }
+
+    public void agregarEquipaje(Equipaje equipaje) {
+        equipajes.add(equipaje);
+    }
+
+
+
 }
