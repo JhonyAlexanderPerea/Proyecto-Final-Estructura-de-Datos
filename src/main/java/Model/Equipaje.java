@@ -17,6 +17,4 @@ public class Equipaje {
         this.largo = largo;
         this.dimension = peso * ancho * alto;
     }
-
-
 }
