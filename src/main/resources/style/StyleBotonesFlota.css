@@ -1,0 +1,19 @@
+/* Estilo base para los botones */
+.button {
+    -fx-background-color: gray; /* Fondo gris */
+    -fx-border-color: green; /* Borde verde */
+    -fx-text-fill: green; /* Texto verde */
+    -fx-font-size: 10px; /* Tamaño de la fuente */
+    -fx-pref-width: 35px; /* Ancho del botón */
+    -fx-pref-height: 35px; /* Alto del botón */
+    -fx-shape: "M 0,17 A 17,17 0 1,1 34,17 A 17,17 0 1,1 0,17 Z"; /* Forma redonda */
+    -fx-border-radius: 50%; /* Bordes redondeados */
+    -fx-background-radius: 50%; /* Fondo redondeado */
+}
+
+/* Estilo cuando el cursor pasa sobre el botón */
+.button:hover {
+    -fx-background-color: gray; /* Fondo gris */
+    -fx-border-color: red; /* Borde rojo */
+    -fx-text-fill: red; /* Texto rojo */
+}
