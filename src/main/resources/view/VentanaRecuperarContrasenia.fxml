@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="480.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaRecupContrasenia">
+<AnchorPane prefHeight="480.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaRecupContrasenia">
    <children>
       <ImageView fitHeight="162.0" fitWidth="211.0" layoutX="151.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,16 +23,16 @@
             <Font size="21.0" />
          </font>
       </Text>
-      <Text layoutX="178.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESTABLECER LA CONTRASEÑA">
+      <Text layoutX="178.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESTABLECER LA CONTRASEÑA">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField layoutX="153.0" layoutY="180.0" prefHeight="25.0" prefWidth="350.0" promptText="Email" />
-      <Text layoutX="188.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingresa el correo electrónico con el que te registraste" />
-      <TextField layoutX="153.0" layoutY="246.0" prefHeight="25.0" prefWidth="350.0" promptText="Nueva contraseña" />
-      <TextField layoutX="153.0" layoutY="309.0" prefHeight="25.0" prefWidth="350.0" promptText="Vuelve a escribir la contraseña" />
-      <Button fx:id="btnCancelar" layoutX="153.0" layoutY="385.0" mnemonicParsing="false" onAction="#onBtnCancelarClick" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="CANCELAR" textFill="WHITE">
+      <TextField layoutX="153.0" layoutY="171.0" prefHeight="40.0" prefWidth="366.0" promptText="Email registrado" />
+      <Text layoutX="188.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingresa el correo electrónico con el que te registraste" />
+      <TextField layoutX="153.0" layoutY="258.0" prefHeight="40.0" prefWidth="366.0" promptText="Nueva contraseña" />
+      <TextField layoutX="153.0" layoutY="316.0" prefHeight="40.0" prefWidth="366.0" promptText="Confirme la nueva contraseña" />
+      <Button fx:id="btnCancelar" layoutX="151.0" layoutY="390.0" mnemonicParsing="false" onAction="#onBtnCancelarClick" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="CANCELAR" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -40,7 +40,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnCambiarContrasenia" layoutX="328.0" layoutY="385.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="CAMBIAR CONTRASEÑA" textFill="WHITE">
+      <Button fx:id="btnCambiarContrasenia" layoutX="344.0" layoutY="389.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="CAMBIAR CONTRASEÑA" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
