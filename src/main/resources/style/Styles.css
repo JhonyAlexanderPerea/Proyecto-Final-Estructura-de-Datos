@@ -11,3 +11,61 @@
 .table-view .column-header-background {
     -fx-background-color: green;
 }
+
+/* Estilo para cuando el RadioButton está seleccionado */
+.radio-button:selected {
+    -fx-text-fill: green;  /* Cambia el color del texto a verde */
+    -fx-background-color: #89fb6f; /* Cambia el color de fondo a verde */
+}
+
+/* Eliminar bordes y establecer fondo blanco para el ComboBox */
+.combo-box {
+    -fx-border-color: transparent;  /* Eliminar el borde */
+    -fx-background-color: white;     /* Fondo blanco */
+}
+
+/* Estilo para el ComboBox cuando esté desplegado (el fondo de la lista de opciones) */
+.combo-box .list-cell {
+    -fx-background-color: white;     /* Fondo blanco para las opciones */
+    -fx-text-fill: black;            /* Color del texto de las opciones */
+}
+
+/* Estilo para cuando una opción está seleccionada */
+.combo-box .list-cell:filled:hover {
+    -fx-background-color: lightgray; /* Fondo gris claro al pasar el ratón */
+}
+
+/* Estilo para la flecha del ComboBox (si deseas cambiar su color también) */
+.combo-box .arrow {
+    -fx-background-color: transparent; /* Eliminar el borde de la flecha */
+}
+/* Cambiar el fondo y el color del texto del DatePicker */
+.date-picker {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+/* Cambiar el estilo del campo de texto dentro del DatePicker */
+.date-picker .text-field {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333;
+}
+/* Estilo para el TextField */
+.text-field {
+    -fx-background-color: white; /* Fondo blanco */
+    -fx-border-color: transparent; /* Sin borde */
+    -fx-text-fill: #333333; /* Texto oscuro */
+    -fx-padding: 10px; /* Espaciado interno */
+    -fx-font-size: 14px; /* Tamaño de la fuente */
+}
+
+/* Opcional: cuando el TextField recibe el foco (cuando el usuario hace clic en él) */
+.text-field:focused {
+    -fx-background-color: white; /* Fondo blanco */
+    -fx-border-color: transparent; /* Mantener sin borde */
+    -fx-text-fill: #333333; /* Texto oscuro */
+    -fx-border-width: 2px; /* Si quieres un borde delgado cuando recibe foco */
+}
+
+
+
