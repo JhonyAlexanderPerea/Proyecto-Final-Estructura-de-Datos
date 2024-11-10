@@ -16,6 +16,6 @@ public class App extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/View/VentanaFlotaAirbus320.fxml"));
         primaryStage.setTitle("Uniquindio Airlines");
         primaryStage.setScene(new Scene(root));
-        primaryStage.show(); //Prueba3
+        primaryStage.show(); //Prueba2
     }
 }
