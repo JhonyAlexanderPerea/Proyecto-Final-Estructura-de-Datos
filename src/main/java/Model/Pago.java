@@ -12,7 +12,7 @@ public class Pago {
     private String medioPago;
     private String codigoPago;
 
-    private double calcularTotalEquipaje() {
+    /*private double calcularTotalEquipaje() {
         double costoEquipaje = 0;
         for (Equipaje equipaje : cliente.getEquipajes()) {
             boolean esNacional = (!tiquete.getViaje().isEsInternacional());
@@ -21,8 +21,7 @@ public class Pago {
             costoEquipaje += equipaje.calcularSobrepesoCosto(limitePeso);
         }
         return costoEquipaje;
-    }
-
+    }*/
 
 
 }
