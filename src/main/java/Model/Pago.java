@@ -49,7 +49,7 @@ public class Pago {
         this.cantTiquetes = listaTiquetes.size();
     }
 
-    private double calcularTotalEquipaje() {
+    /*private double calcularTotalEquipaje() {
         double costoEquipaje = 0;
         for (Equipaje equipaje : cliente.getEquipajes()) {
             boolean esNacional = (!tiquete.getViaje().isEsInternacional());
@@ -58,8 +58,7 @@ public class Pago {
             costoEquipaje += equipaje.calcularSobrepesoCosto(limitePeso);
         }
         return costoEquipaje;
-    }
-
+    }*/
 
 
 }
