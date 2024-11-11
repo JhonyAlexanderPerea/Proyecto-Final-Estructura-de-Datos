@@ -27,6 +27,7 @@ public class Viaje {
         this.horaLlegada = calcularHoraRetorno();
     }
 
+<<<<<<< Updated upstream
     public Viaje(boolean esInternacional, RutaNacional destinoNacional, int duracionHoras, int duracionMinutos, LocalTime horaSalida) {
         this.esInternacional = false;
         this.destinoNacional = destinoNacional;
@@ -44,4 +45,6 @@ public class Viaje {
     public String getDestino() {
         return esInternacional ? destinoInternacional.name() : destinoNacional.name();
     }
+=======
+>>>>>>> Stashed changes
 }
