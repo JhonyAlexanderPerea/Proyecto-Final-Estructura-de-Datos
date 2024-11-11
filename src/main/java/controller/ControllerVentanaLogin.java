@@ -1,15 +1,20 @@
 package controller;
 
+import Model.Registro;
 import javafx.scene.control.Hyperlink;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import util.AlertasUtil;
 import util.manejoVentanasUtil;
+
+import java.io.IOException;
 
 public class ControllerVentanaLogin {
 
@@ -18,8 +23,9 @@ public class ControllerVentanaLogin {
     @FXML
     public TextField txtEmail; // Campo de texto para el email
 
+
     @FXML
-    public TextField txtPassword; // Campo de texto para la contraseña
+    private PasswordField txtPassword;// Campo de texto para la contraseña
 
     @FXML
     private Button btnEntrar; // Botón para iniciar sesión
@@ -32,8 +38,15 @@ public class ControllerVentanaLogin {
 
     // Método adicional para manejar el inicio de sesión
     @FXML
-    void abrirVentanaPrincipal(MouseEvent event) {
-        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaPrincipal.fxml", "Uniquindio Airlines");
+    void abrirVentanaPrincipal(MouseEvent event) throws IOException {
+        if (Registro.validarLogin(txtEmail.getText(),txtPassword.getText()))
+        {
+            manejoVentanasUtil.cambiarVentana(event, "/view/VentanaPrincipal.fxml", "Uniquindio Airlines");
+        }
+        else
+        {
+            AlertasUtil.mostrarAlerta("El usuario no se encuentra en la base de datos");
+        }
     }
 
     @FXML

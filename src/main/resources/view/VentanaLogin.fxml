@@ -50,7 +50,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnRegistrate" layoutX="195.0" layoutY="507.0" mnemonicParsing="false"  onMouseClicked="#abrirVentanaRegistro" prefHeight="36.0" prefWidth="142.0" style="-fx-background-color: green;" text="REGÍSTRATE" textFill="WHITE">
+      <Button fx:id="btnRegistrate" layoutX="195.0" layoutY="507.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaRegistro" prefHeight="36.0" prefWidth="142.0" style="-fx-background-color: green;" text="REGÍSTRATE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -64,6 +64,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <PasswordField layoutX="38.0" layoutY="327.0" prefHeight="25.0" prefWidth="436.0" promptText="Contraseña" />
+      <PasswordField fx:id="txtPassword" layoutX="38.0" layoutY="327.0" prefHeight="25.0" prefWidth="436.0" promptText="Contraseña" />
    </children>
 </AnchorPane>
