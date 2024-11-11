@@ -8,16 +8,21 @@ import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
 import javafx.scene.input.MouseEvent;
 import java.io.IOException;
+import util.manejoVentanasUtil;
 
 public class ControllerVentanaPrincipal {
 
+    manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
     @FXML
     private Hyperlink linkSalir;
 
     @FXML
     private void abrirVentanaTripulante(MouseEvent event) {
+<<<<<<< Updated upstream
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaTripulante.fxml", "Tripulante");
+=======
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaTripulante.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/VentanaTripulante.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
@@ -30,6 +35,7 @@ public class ControllerVentanaPrincipal {
         } catch (IOException e) {
             e.printStackTrace();
         }
+>>>>>>> Stashed changes
     }
     @FXML
     void onLinkSalirClick(MouseEvent event) {
