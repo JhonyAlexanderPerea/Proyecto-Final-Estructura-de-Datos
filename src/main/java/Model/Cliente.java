@@ -28,10 +28,19 @@ public class Cliente extends Persona{
         this.servicioViaje = servicioViaje;
     }
 
+<<<<<<< Updated upstream
     public void agregarEquipaje(Equipaje equipaje) {
         equipajes.add(equipaje);
     }
 
 
 
+=======
+    public void comprarTiquete ()
+    {
+
+    }
+
+
+>>>>>>> Stashed changes
 }
