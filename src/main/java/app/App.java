@@ -14,9 +14,9 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/VentanaTripulante.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/VentanaPrincipal.fxml"));
         primaryStage.setTitle("Uniquindio Airlines");
         primaryStage.setScene(new Scene(root));
-        primaryStage.show(); //Prueba3
+        primaryStage.show();
     }
 }
