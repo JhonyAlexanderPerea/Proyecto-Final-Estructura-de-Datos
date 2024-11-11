@@ -22,8 +22,8 @@ public  abstract class Persona {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-
     public Persona(String nombre) {
         this.nombre = nombre;
     }
+
 }
