@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaLogin">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaLogin">
    <children>
       <Text layoutX="181.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INICIAR SESIÓN">
          <font>
@@ -42,7 +42,7 @@
             <Image url="@../images/1729820977042.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnEntrar" layoutX="202.0" layoutY="385.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="ENTRAR" textFill="WHITE">
+      <Button fx:id="btnEntrar" layoutX="203.0" layoutY="385.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaPrincipal" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="ENTRAR" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -50,7 +50,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnRegistrate" layoutX="191.0" layoutY="507.0" mnemonicParsing="false" onMouseClicked="#onBtnRegistrateClick" prefHeight="36.0" prefWidth="142.0" style="-fx-background-color: green;" text="REGÍSTRATE" textFill="WHITE">
+      <Button fx:id="btnRegistrate" layoutX="195.0" layoutY="507.0" mnemonicParsing="false"  onMouseClicked="#abrirVentanaRegistro" prefHeight="36.0" prefWidth="142.0" style="-fx-background-color: green;" text="REGÍSTRATE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -58,7 +58,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Hyperlink fx:id="linkOlvideContrasena" layoutX="204.0" layoutY="424.0" onMouseClicked="#onLinkOlvideContrasenaClick" text="Olvidé la contraseña" />
+      <Hyperlink fx:id="linkOlvideContrasena" layoutX="201.0" layoutY="424.0" onMouseClicked="#abrirVentanaOlvideContrasenia" text="Olvidé la contraseña" />
       <Text fill="#575757" layoutX="200.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿No tienes cuenta?">
          <font>
             <Font name="System Bold" size="14.0" />

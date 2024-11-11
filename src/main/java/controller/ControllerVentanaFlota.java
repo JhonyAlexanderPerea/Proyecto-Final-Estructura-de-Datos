@@ -1,12 +1,15 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Label;
+import util.manejoVentanasUtil;
 
 public class ControllerVentanaFlota {
 
+    manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
     @FXML
     private Pane paneAsientos;
     @FXML
@@ -212,6 +215,10 @@ public class ControllerVentanaFlota {
     }
     public void actualizarTipoAeronave(String tipoAeronave) {
         labelTipoAeronave.setText(tipoAeronave);  // Actualiza el texto del Label
+    }
+
+    public void abrirVentanaCompra(ActionEvent actionEvent) {
+        manejoVentanasUtil.cambiarVentana(actionEvent, "/view/VentanaCompra.fxml", "Compra");
     }
 }
 
