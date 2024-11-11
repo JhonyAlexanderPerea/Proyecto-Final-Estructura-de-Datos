@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="617.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaPerfilTripulante">
+<AnchorPane prefHeight="617.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaPerfilTripulante">
    <children>
       <ImageView fitHeight="49.0" fitWidth="45.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -43,7 +43,7 @@
          <children>
             <ImageView fitHeight="25.0" fitWidth="22.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Icon%20persona%20verde.png" />
+                  <Image url="@../images/IconPersonaVerde.png" />
                </image>
             </ImageView>
             <Text fill="#399053" layoutX="52.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información" wrappingWidth="106.3125">
@@ -54,7 +54,7 @@
             <Text layoutX="35.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre(s)" />
             <TextField layoutX="147.0" layoutY="102.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
             <Text layoutX="35.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido(s)" />
-            <TextField layoutX="147.0" layoutY="152.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <TextField layoutX="147.0" layoutY="144.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
             <Text layoutX="35.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificación" />
             <TextField layoutX="147.0" layoutY="202.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
             <TextField layoutX="147.0" layoutY="252.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
@@ -86,7 +86,7 @@
       </Text>
       <ImageView fitHeight="136.0" fitWidth="56.0" layoutX="1120.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/Icon%20tripulante.png" />
+            <Image url="@../images/IconTripulante.png" />
          </image>
       </ImageView>
    </children>
