@@ -1,27 +1,21 @@
 package Model;
 
-<<<<<<< Updated upstream
 import enums.ServicioViaje;
-=======
 import enums.Clase;
 import enums.TipoViaje;
->>>>>>> Stashed changes
+
 import lombok.Data;
 
 import java.util.List;
 
 @Data
 public class Pago {
-<<<<<<< Updated upstream
-    private Cliente cliente;
-    private double monto;
-    private Tiquete tiquete;
-=======
 
+    private Cliente cliente;
+    private Tiquete tiquete;
     private String tipoViaje;
     private double monto;
     private List<Tiquete> listaTiquetes;
->>>>>>> Stashed changes
     private int cantTiquetes;
     private String medioPago;
     private String codigoPago;

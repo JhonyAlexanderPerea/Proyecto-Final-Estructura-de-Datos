@@ -9,8 +9,11 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import util.manejoVentanasUtil;
 
 public class ControllerVentanaLogin {
+
+    manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
 
     @FXML
     public TextField txtEmail; // Campo de texto para el email
@@ -27,44 +30,18 @@ public class ControllerVentanaLogin {
     @FXML
     private Hyperlink linkOlvideContrasena;
 
-    @FXML
-    void onBtnRegistrateClick(MouseEvent event) {
-        try {
-            // Carga la ventana de registro
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaRegistrar.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Registro"); // Título de la nueva ventana
-            stage.show();
-
-            // Cierra la ventana de inicio de sesión si es necesario
-            ((Stage) btnRegistrate.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace(); // Imprimir errores en caso de fallar la carga
-        }
-    }
     // Método adicional para manejar el inicio de sesión
     @FXML
-    void onBtnEntrarClick(MouseEvent event) {
+    void abrirVentanaPrincipal(MouseEvent event) {
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaPrincipal.fxml", "Uniquindio Airlines");
     }
 
     @FXML
-    void onLinkOlvideContrasenaClick(MouseEvent event) {
-        try {
-            // Carga la ventana de recuperación de contraseña
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaRecuperarContrasenia.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Recuperar Contraseña"); // Título de la nueva ventana
-            stage.show();
-
-            // Cierra la ventana de inicio de sesión si es necesario
-            ((Stage) linkOlvideContrasena.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace(); // Imprimir errores en caso de fallar la carga
-        }
+    void abrirVentanaOlvideContrasenia(MouseEvent event) {
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaRecuperarContrasenia.fxml", "Recuperar Contraseña");
     }
 
+    public void abrirVentanaRegistro(MouseEvent event) {
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaRegistrar.fxml", "Registro");
+    }
 }
