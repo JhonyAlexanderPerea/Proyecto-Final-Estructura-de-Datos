@@ -36,7 +36,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
-            <Text layoutX="111.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccionar Aeronave" wrappingWidth="184.3125">
+            <Text layoutX="103.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccionar Aeronave" wrappingWidth="201.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -55,18 +55,18 @@
       </AnchorPane>
       <AnchorPane layoutX="148.0" layoutY="445.0" prefHeight="235.0" prefWidth="406.0" style="-fx-background-color: eeeeee; -fx-border-style: solid; -fx-border-color: d5d3d3;">
          <children>
-            <Text layoutX="77.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de la Tripulación" wrappingWidth="251.3125">
+            <Text layoutX="70.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de la Tripulación" wrappingWidth="270.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <Text layoutX="34.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aeronave" />
-            <Text layoutX="34.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TipoAeronave" wrappingWidth="119.5078125">
+            <Text layoutX="29.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aeronave" />
+            <Text layoutX="27.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TipoAeronave" wrappingWidth="126.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <Text layoutX="34.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requiere" />
+            <Text layoutX="29.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requiere" />
             <Text layoutX="106.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- 1 Piloto" wrappingWidth="119.5078125">
                <font>
                   <Font name="System Bold" size="15.0" />
@@ -92,7 +92,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
-            <Text layoutX="161.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asignar Tripulantes" wrappingWidth="165.3125">
+            <Text layoutX="170.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asignar Tripulantes" wrappingWidth="184.3125">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -170,7 +170,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Text layoutX="441.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTIÓN DE TRIPULACIÓN" wrappingWidth="307.3125">
+      <Text layoutX="505.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTIÓN DE TRIPULACIÓN" wrappingWidth="184.3125">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

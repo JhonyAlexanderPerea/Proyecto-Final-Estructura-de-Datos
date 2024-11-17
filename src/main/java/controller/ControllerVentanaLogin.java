@@ -1,5 +1,6 @@
 package controller;
 
+import Model.Administrador;
 import Model.Registro;
 import javafx.scene.control.Hyperlink;
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ import util.manejoVentanasUtil;
 import java.io.IOException;
 
 public class ControllerVentanaLogin {
+
 
     manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
 
@@ -45,7 +47,11 @@ public class ControllerVentanaLogin {
         }
         else
         {
-            AlertasUtil.mostrarAlerta("El usuario no se encuentra en la base de datos");
+            if (txtPassword.getText().equals("")|| txtEmail.getText().equals("") )
+            {
+                AlertasUtil.mostrarAlerta("Nombre de usuario o contraseña incorrectas.");
+            }
+            AlertasUtil.mostrarAlerta("El usuario no se encuentra en la base de datos.");
         }
     }
 
