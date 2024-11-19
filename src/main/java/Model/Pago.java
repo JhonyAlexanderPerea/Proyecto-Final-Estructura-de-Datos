@@ -14,7 +14,7 @@ public class Pago {
     private Cliente cliente;
     private Tiquete tiquete;
     private String tipoViaje;
-    private double monto;
+    //private double monto;
     private List<Tiquete> listaTiquetes;
     private int cantTiquetes;
     private String medioPago;

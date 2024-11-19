@@ -18,7 +18,23 @@ public class ControllerVentanaPrincipal {
 
     @FXML
     private void abrirVentanaTripulante(MouseEvent event) {
+
         manejoVentanasUtil.cambiarVentana(event, "/view/VentanaTripulante.fxml", "Tripulante");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/VentanaTripulante.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Ventana Tripulante");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+            Stage stagePrincipal = (Stage) ((Parent) event.getSource()).getScene().getWindow();
+            stagePrincipal.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void abrirVentanaLogin(MouseEvent mouseEvent) {
