@@ -1,8 +1,6 @@
 package Model;
 
-
 import enums.ServicioViaje;
-
 import enums.Clase;
 import enums.TipoViaje;
 
@@ -14,14 +12,10 @@ import java.util.List;
 public class Pago {
 
     private Cliente cliente;
-    private double monto;
     private Tiquete tiquete;
-
-
     private String tipoViaje;
     //private double monto;
     private List<Tiquete> listaTiquetes;
-
     private int cantTiquetes;
     private String medioPago;
     private String codigoPago;

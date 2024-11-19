@@ -36,21 +36,8 @@ public class ControllerVentanaPrincipal {
         }
 
     }
-    @FXML
-    void onLinkSalirClick(MouseEvent event) {
-        try {
-            // Carga la ventana de recuperación de contraseña
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaLogin.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Login"); // Título de la nueva ventana
-            stage.show();
 
-            // Cierra la ventana de inicio de sesión si es necesario
-            ((Stage) linkSalir.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace(); // Imprimir errores en caso de fallar la carga
-        }
+    public void abrirVentanaLogin(MouseEvent mouseEvent) {
+        manejoVentanasUtil.cambiarVentana(mouseEvent, "/view/VentanaLogin.fxml", "Login");
     }
 }

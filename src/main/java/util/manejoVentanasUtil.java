@@ -23,6 +23,10 @@ public class manejoVentanasUtil {
                 AeronaveController aeronaveController  = loader.getController();
             } else if (fxmlPath.equals("/view/VentanaCompra.fxml")) {
                 ControllerVentanaCompra controllerVentanaCompra = loader.getController();
+            } else if (fxmlPath.equals("/view/VentanaCompraPrincipal.fxml")) {
+                ControllerVentanaCompraPrincipal controllerVentanaCompraPrincipal = loader.getController();
+            } else if (fxmlPath.equals("/view/VentanaFlota.fxml")) {
+                ControllerVentanaFlota controllerVentanaFlota = loader.getController();
             } else if (fxmlPath.equals("/view/VentanaLogin.fxml")) {
                 ControllerVentanaLogin controllerVentanaLogin = loader.getController();
             } else if (fxmlPath.equals("/view/VentanaPerfilTripulante.fxml")) {
