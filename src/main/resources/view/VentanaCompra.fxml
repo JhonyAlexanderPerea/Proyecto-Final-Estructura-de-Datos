@@ -11,21 +11,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="574.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaCompra">
+<AnchorPane prefHeight="574.0" prefWidth="110.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaCompra">
    <children>
-      <Pane layoutY="94.0" prefHeight="38.0" prefWidth="1200.0" style="-fx-background-color: green;" />
+      <Pane layoutY="94.0" prefHeight="38.0" prefWidth="1023.0" style="-fx-background-color: green;" />
       <ImageView fitHeight="93.0" fitWidth="117.0" layoutX="238.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="76.0" fitWidth="178.0" layoutX="511.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="76.0" fitWidth="178.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/1730417289025.png" />
          </image>
       </ImageView>
-      <Text layoutX="177.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Completa datos del viajero">
+      <Text layoutX="85.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Completa datos del viajero">
          <font>
             <Font size="28.0" />
          </font>
       </Text>
-      <AnchorPane layoutX="177.0" layoutY="233.0" prefHeight="289.0" prefWidth="846.0" style="-fx-background-color: eeeeee; -fx-region-border: -fx-border-color: black; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+      <AnchorPane layoutX="85.0" layoutY="225.0" prefHeight="289.0" prefWidth="846.0" style="-fx-background-color: eeeeee; -fx-region-border: -fx-border-color: black; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: d5d3d3;">
          <children>
             <ImageView fitHeight="44.0" fitWidth="47.0" layoutX="15.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -56,12 +56,12 @@
             <Text layoutX="643.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección de Residencia" />
          </children>
       </AnchorPane>
-      <Button fx:id="btnContinuar" layoutX="1060.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="126.0" style="-fx-background-color: green; -fx-background-radius: 1;" text="Continuar" textFill="WHITE">
+      <Button fx:id="btnContinuar" layoutX="883.0" layoutY="26.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="126.0" style="-fx-background-color: green; -fx-background-radius: 1;" text="Continuar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnCancelar" layoutX="928.0" layoutY="25.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="126.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Cancelar" textFill="#00ff55">
+      <Button fx:id="btnCancelar" layoutX="750.0" layoutY="27.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="126.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Cancelar" textFill="#00ff55">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

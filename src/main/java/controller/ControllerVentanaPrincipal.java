@@ -18,9 +18,8 @@ public class ControllerVentanaPrincipal {
 
     @FXML
     private void abrirVentanaTripulante(MouseEvent event) {
-<<<<<<< Updated upstream
+
         manejoVentanasUtil.cambiarVentana(event, "/view/VentanaTripulante.fxml", "Tripulante");
-=======
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/VentanaTripulante.fxml"));
             Parent root = loader.load();
@@ -35,7 +34,7 @@ public class ControllerVentanaPrincipal {
         } catch (IOException e) {
             e.printStackTrace();
         }
->>>>>>> Stashed changes
+
     }
     @FXML
     void onLinkSalirClick(MouseEvent event) {
