@@ -12,12 +12,20 @@ public class ControllerVentanaFlota {
     private Pane paneAsientos;
     @FXML
     private Label labelTipoAeronave;
+    @FXML
+    private Label nombreDestino;
+    @FXML
+    private Label tipoClaseCliente;
 
     private String tipoAeronave; // Variable para definir el tipo de aeronave
 
     public void initialize() {
         tipoAeronave = "Airbus320";  // Dependiendo el tipoAeronave se mostrara la flota correspondiente
         crearAsientos();
+    }
+
+    public void actualizarTexto(String texto) {
+        nombreDestino.setText(texto);
     }
 
     private void crearAsientos() {
