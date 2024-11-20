@@ -1,5 +1,7 @@
 package Model;
 
+import enums.ServicioViaje;
+import enums.TipoRuta;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -13,6 +15,8 @@ public class Cliente extends Persona{
     private Mascota mascota;
     private Equipaje equipaje;
     private Tarjeta tarjeta;
+    private Viaje viaje;
+    private ServicioViaje clase;
 
     public Cliente(String id, String nombre, String direccion, String email, LocalDate fechaNacimiento, String apellido, String direccionResidencia, boolean viajaMascota, Mascota mascota, Equipaje equipaje, Tarjeta tarjeta) {
         super(id, nombre, direccion, email, fechaNacimiento);
@@ -23,4 +27,5 @@ public class Cliente extends Persona{
         this.equipaje = equipaje;
         this.tarjeta = tarjeta;
     }
+
 }
