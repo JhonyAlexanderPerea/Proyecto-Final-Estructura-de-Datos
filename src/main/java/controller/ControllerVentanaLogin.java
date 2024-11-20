@@ -1,22 +1,33 @@
 package controller;
 
+import Model.Administrador;
+import Model.RegistroGeneral;
 import javafx.scene.control.Hyperlink;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import util.AlertasUtil;
+import util.manejoVentanasUtil;
+
+import java.io.IOException;
 
 public class ControllerVentanaLogin {
+
+
+    manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
 
     @FXML
     public TextField txtEmail; // Campo de texto para el email
 
+
     @FXML
-    public TextField txtPassword; // Campo de texto para la contraseña
+    private PasswordField txtPassword;// Campo de texto para la contraseña
 
     @FXML
     private Button btnEntrar; // Botón para iniciar sesión
@@ -27,44 +38,29 @@ public class ControllerVentanaLogin {
     @FXML
     private Hyperlink linkOlvideContrasena;
 
-    @FXML
-    void onBtnRegistrateClick(MouseEvent event) {
-        try {
-            // Carga la ventana de registro
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaRegistrar.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Registro"); // Título de la nueva ventana
-            stage.show();
-
-            // Cierra la ventana de inicio de sesión si es necesario
-            ((Stage) btnRegistrate.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace(); // Imprimir errores en caso de fallar la carga
-        }
-    }
     // Método adicional para manejar el inicio de sesión
     @FXML
-    void onBtnEntrarClick(MouseEvent event) {
-    }
-
-    @FXML
-    void onLinkOlvideContrasenaClick(MouseEvent event) {
-        try {
-            // Carga la ventana de recuperación de contraseña
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaRecuperarContrasenia.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Recuperar Contraseña"); // Título de la nueva ventana
-            stage.show();
-
-            // Cierra la ventana de inicio de sesión si es necesario
-            ((Stage) linkOlvideContrasena.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace(); // Imprimir errores en caso de fallar la carga
+    void abrirVentanaPrincipal(MouseEvent event) throws IOException {
+        if (RegistroGeneral.validarLoginAdministrador(txtEmail.getText(),txtPassword.getText()))
+        {
+            manejoVentanasUtil.cambiarVentana(event, "/view/VentanaPrincipal.fxml", "Uniquindio Airlines");
+        }
+        else
+        {
+            if (txtPassword.getText().equals("")|| txtEmail.getText().equals("") )
+            {
+                AlertasUtil.mostrarAlerta("Nombre de usuario o contraseña incorrectas.");
+            }
+            AlertasUtil.mostrarAlerta("El usuario no se encuentra en la base de datos.");
         }
     }
 
+    @FXML
+    void abrirVentanaOlvideContrasenia(MouseEvent event) {
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaRecuperarContrasenia.fxml", "Recuperar Contraseña");
+    }
+
+    public void abrirVentanaRegistro(MouseEvent event) {
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaRegistrar.fxml", "Registro");
+    }
 }

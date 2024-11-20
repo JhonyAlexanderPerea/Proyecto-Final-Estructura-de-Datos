@@ -65,7 +65,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Button fx:id="btnSeleccionarAsientos" layoutX="1021.0" layoutY="28.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="216.0" style="-fx-background-color: green; -fx-background-radius: 3;" text="Seleccionar asientos" textFill="WHITE">
+            <Button fx:id="btnSeleccionarAsientos" layoutX="1021.0" layoutY="28.0" mnemonicParsing="false" onAction="#abrirVentanaCompra" prefHeight="43.0" prefWidth="216.0" style="-fx-background-color: green; -fx-background-radius: 3;" text="Seleccionar asientos" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

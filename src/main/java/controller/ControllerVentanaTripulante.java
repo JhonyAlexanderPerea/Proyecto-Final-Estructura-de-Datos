@@ -1,54 +1,78 @@
 package controller;
 
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
-import javafx.scene.Node;
 import javafx.event.ActionEvent;
-import java.io.IOException;
+import javafx.event.Event;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.text.Text;
+import util.manejoVentanasUtil;
+
+
 
 public class ControllerVentanaTripulante {
 
-    @FXML
-    private Button btnAgregarNuevoTripulante;
+    manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
 
     @FXML
-    private Button btnRegresar;
+    private Text txtCantAuxiliaresVuelo;
 
     @FXML
-    private void abrirVentanaPerfilTripulante(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaPerfilTripulante.fxml"));
-            Parent root = loader.load();
+    private Text txtTipoAeronave;
 
-            Stage stage = new Stage();
-            stage.setTitle("Perfil del Tripulante");
-            stage.setScene(new Scene(root));
-            stage.show();
+    @FXML
+    private ComboBox<String> comboBoxTipoAeronave;
 
-            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stageActual.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+    // Este método se llama cuando la ventana FXML se ha cargado
+    public void initialize() {
+        // Agregar opciones al ComboBox
+        comboBoxTipoAeronave.getItems().addAll("Airbus320","Airbus330","Boeing787");
+    }
+
+    @FXML
+    public void abrirVentanaPrincipal(javafx.event.ActionEvent actionEvent) {
+        manejoVentanasUtil.cambiarVentana(actionEvent, "/view/VentanaPrincipal.fxml","");
+
+    }
+
+    @FXML
+    public void abrirPerfilTripulante(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void continuaCompra1(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void guardar(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void cambiarInfoTripulacion(ActionEvent actionEvent) {
+        String tipoAeronave = String.valueOf(comboBoxTipoAeronave.getSelectionModel().getSelectedItem());
+        switch (tipoAeronave)
+        {
+            case "Airbus320":
+                txtTipoAeronave.setText("Airbus320");
+                txtCantAuxiliaresVuelo.setText("-3 Auxiliares de vuelo");
+                break;
+            case "Airbus330":
+                txtTipoAeronave.setText("Airbus330");
+                txtCantAuxiliaresVuelo.setText("-7 Auxiliares de vuelo");
+                break;
+            case "Boeing787":
+                    txtTipoAeronave.setText("Boeing787");
+                    txtCantAuxiliaresVuelo.setText("-7 Auxiliares de vuelo");
+                    break;
         }
     }
+
     @FXML
-    private void abrirVentanaPrincipal(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/VentanaPrincipal.fxml"));
-            Parent root = loader.load();
+    public void abrirVentanaAgregarTripulante(ActionEvent actionEvent) {
+        manejoVentanasUtil.cambiarVentana(actionEvent, "/view/VentanaPerfilTripulante.fxml","Agregar tripulante");
+    }
 
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
+    @FXML
+    public void guardarTripulacionAeronave(ActionEvent actionEvent) {
 
-            Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stageActual.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

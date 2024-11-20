@@ -1,18 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaTripulante">
+<AnchorPane prefHeight="706.0" prefWidth="1195.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaTripulante">
    <children>
       <ImageView fitHeight="70.0" fitWidth="175.0" layoutX="513.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/1730417289025.png" />
          </image>
       </ImageView>
-      <Pane layoutY="96.0" prefHeight="39.0" prefWidth="1200.0" style="-fx-background-color: green;" />
+      <Pane layoutX="-6.0" layoutY="85.0" prefHeight="49.0" prefWidth="1201.0" style="-fx-background-color: green;">
+         <children>
+            <Button fx:id="btnListaTripulantes" layoutX="20.0" layoutY="5.0" mnemonicParsing="false" onAction="#abrirPerfilTripulante" prefHeight="39.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Lista de Tripulantes" textFill="#00ff55">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnAgregarTripulante" layoutX="241.0" layoutY="5.0" mnemonicParsing="false" onAction="#abrirVentanaAgregarTripulante" prefHeight="39.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Agregar Tripulante" textFill="#00ff55">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></Pane>
+      <AnchorPane layoutX="150.0" layoutY="230.0" prefHeight="207.0" prefWidth="406.0" style="-fx-background-color: eeeeee; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+         <children>
+            <ComboBox fx:id="comboBoxTipoAeronave" layoutX="31.0" layoutY="94.0" onAction="#cambiarInfoTripulacion" prefHeight="34.0" prefWidth="264.0" promptText="Seleccionar Aeronave" style="-fx-border-color: d5d3d3; -fx-background-color: eeeeee;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Text layoutX="103.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccionar Aeronave" wrappingWidth="201.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="31.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aeronave | Seleccionar" />
+            <Button fx:id="btnContinuarCompra1" layoutX="31.0" layoutY="152.0" mnemonicParsing="false" onAction="#continuaCompra1" prefHeight="34.0" prefWidth="149.0" style="-fx-background-color: green; -fx-background-radius: 1;" text="Confirmar Aeronave" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Separator layoutX="-2.0" layoutY="48.0" prefHeight="4.0" prefWidth="406.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="148.0" layoutY="445.0" prefHeight="235.0" prefWidth="406.0" style="-fx-background-color: eeeeee; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+         <children>
+            <Text layoutX="70.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de la Tripulación" wrappingWidth="270.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="29.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aeronave" />
+            <Text fx:id="txtTipoAeronave" layoutX="27.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TipoAeronave" wrappingWidth="126.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="29.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requiere" />
+            <Text layoutX="106.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- 1 Piloto" wrappingWidth="119.5078125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="106.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- 1 Copiloto" wrappingWidth="119.5078125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtCantAuxiliaresVuelo" layoutX="106.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- n auxiliares de Vuelo" wrappingWidth="184.3125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Separator layoutX="1.0" layoutY="48.0" prefHeight="4.0" prefWidth="406.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="564.0" layoutY="230.0" prefHeight="450.0" prefWidth="488.0" style="-fx-background-color: eeeeee; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+         <children>
+            <ComboBox fx:id="comboBoxOrigen11" layoutX="26.0" layoutY="95.0" prefHeight="27.0" prefWidth="201.0" promptText="Seleccionar Piloto" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Text layoutX="170.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asignar Tripulantes" wrappingWidth="184.3125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Separator layoutX="4.0" layoutY="47.0" prefHeight="4.0" prefWidth="481.0" />
+            <Text layoutX="26.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Piloto | Comandante de Vuelo" />
+            <Text layoutX="262.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copiloto" />
+            <ComboBox fx:id="comboBoxOrigen111" layoutX="262.0" layoutY="95.0" prefHeight="27.0" prefWidth="201.0" promptText="Seleccionar Copiloto" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Text layoutX="26.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliares" wrappingWidth="184.3125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="26.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 1" />
+            <ComboBox fx:id="comboBoxOrigen112" layoutX="118.0" layoutY="182.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 1" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Text layoutX="26.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 2" wrappingWidth="70.6875" />
+            <ComboBox fx:id="comboBoxOrigen1121" layoutX="118.0" layoutY="221.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 2" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ComboBox fx:id="comboBoxOrigen11211" layoutX="118.0" layoutY="260.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 3" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ComboBox fx:id="comboBoxOrigen112111" layoutX="118.0" layoutY="298.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 4" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ComboBox fx:id="comboBoxOrigen1121111" layoutX="118.0" layoutY="338.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 5" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ComboBox fx:id="comboBoxOrigen11211111" layoutX="118.0" layoutY="376.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 6" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ComboBox fx:id="comboBoxOrigen112111111" layoutX="118.0" layoutY="415.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 7" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Text layoutX="26.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 3" wrappingWidth="70.6875" />
+            <Text layoutX="26.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 4" wrappingWidth="70.6875" />
+            <Text layoutX="26.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 5" wrappingWidth="70.6875" />
+            <Text layoutX="26.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 6" wrappingWidth="70.6875" />
+            <Text layoutX="26.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 7" wrappingWidth="70.6875" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnGuardar" layoutX="1061.0" layoutY="26.0" mnemonicParsing="false" onAction="#guardarTripulacionAeronave" prefHeight="39.0" prefWidth="126.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Continuar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="926.0" layoutY="26.0" mnemonicParsing="false" onAction="#abrirVentanaPrincipal" prefHeight="39.0" prefWidth="126.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Cancelar" textFill="#00ff55">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="505.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTIÓN DE TRIPULACIÓN" wrappingWidth="184.3125">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Pane layoutX="153.0" layoutY="206.0" prefHeight="4.0" prefWidth="899.0" style="-fx-background-color: green;" />
    </children>
 </AnchorPane>

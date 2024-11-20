@@ -113,7 +113,7 @@
             <Image url="@../images/1731111740505.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="btnContinuarCompra" layoutX="885.0" layoutY="60.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="157.0" style="-fx-background-color: green; -fx-background-radius: 40;" text="Continuar" textFill="WHITE">
+      <Button fx:id="btnContinuarCompra" layoutX="885.0" layoutY="60.0" mnemonicParsing="false" onAction="#abrirVentanaFlota" prefHeight="43.0" prefWidth="157.0" style="-fx-background-color: green; -fx-background-radius: 40;" text="Continuar" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

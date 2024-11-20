@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="667.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaCompra">
+   <children>
+      <Pane prefHeight="37.0" prefWidth="1104.0" style="-fx-background-color: green;" />
+      <ImageView fitHeight="196.0" fitWidth="255.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/1729820977042.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="4.0" layoutY="115.0" prefHeight="0.0" prefWidth="1100.0" />
+      <Text layoutX="87.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipaje">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnContinuar" layoutX="964.0" layoutY="57.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="126.0" style="-fx-background-color: green; -fx-background-radius: 1;" text="Continuar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="832.0" layoutY="58.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="126.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Cancelar" textFill="#00ff55">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="87.0" layoutY="194.0" prefHeight="64.0" prefWidth="934.0" style="-fx-background-color: eeeeee; -fx-region-border: -fx-border-color: black; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+         <children>
+            <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clase de vuelo" />
+            <Label layoutX="14.0" layoutY="32.0" text="Clase Ejecutiva">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="243.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de vuelo" />
+            <Label layoutX="243.0" layoutY="32.0" text="Nacional">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="454.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad de Maletas" />
+            <Text layoutX="707.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso Máximo " />
+            <Label layoutX="497.0" layoutY="32.0" text="n">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="728.0" layoutY="32.0" text="nkg">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="409.0" layoutY="270.0" prefHeight="342.0" prefWidth="298.0" style="-fx-background-color: eeeeee; -fx-region-border: -fx-border-color: black; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+         <children>
+            <Label layoutX="77.0" layoutY="14.0" text="Equipaje de Mano">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="4.0" layoutY="51.0" prefHeight="3.0" prefWidth="298.0" />
+            <Label layoutX="20.0" layoutY="69.0" text="Alto" />
+            <TextField layoutX="16.0" layoutY="93.0" prefHeight="37.0" prefWidth="272.0" promptText="Altura en cm" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <Label layoutX="16.0" layoutY="148.0" text="Largo" />
+            <TextField layoutX="18.0" layoutY="171.0" prefHeight="37.0" prefWidth="272.0" promptText="Largo en cm" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <Label layoutX="15.0" layoutY="229.0" text="Ancho" />
+            <TextField layoutX="16.0" layoutY="253.0" prefHeight="37.0" prefWidth="272.0" promptText="Ancho en cm" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="723.0" layoutY="270.0" prefHeight="342.0" prefWidth="298.0" style="-fx-background-color: eeeeee; -fx-region-border: -fx-border-color: black; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+         <children>
+            <Label layoutX="109.0" layoutY="14.0" text="Mascotas">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutY="50.0" prefHeight="3.0" prefWidth="298.0" />
+            <Label layoutX="18.0" layoutY="68.0" text="Peso mascota:" />
+            <TextField layoutX="14.0" layoutY="92.0" prefHeight="37.0" prefWidth="272.0" promptText="Peso en kg" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <Label layoutX="18.0" layoutY="188.0" text="Tarifa Calculada:" />
+            <TextArea layoutX="14.0" layoutY="217.0" prefHeight="37.0" prefWidth="272.0" promptText="Costo mascota" />
+         </children>
+      </AnchorPane>
+      <Text layoutX="568.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total a pagar" />
+      <Label layoutX="568.0" layoutY="77.0" text="\$000.000">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="87.0" layoutY="270.0" prefHeight="342.0" prefWidth="311.0" style="-fx-background-color: eeeeee; -fx-region-border: -fx-border-color: black; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: d5d3d3;">
+         <children>
+            <Label layoutX="77.0" layoutY="14.0" text="Equipaje Facturado">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="4.0" layoutY="51.0" prefHeight="3.0" prefWidth="304.0" />
+            <Label layoutX="14.0" layoutY="73.0" text="Cantidad de maletas permitidas" />
+            <Label layoutX="93.0" layoutY="100.0" text="n">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="134.0" text="Peso máximo por cada maleta" />
+            <Label layoutX="82.0" layoutY="158.0" text="nkg">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField layoutX="831.0" layoutY="158.0" prefHeight="37.0" prefWidth="178.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+   </children>
+</AnchorPane>

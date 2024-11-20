@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="617.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaPerfilTripulante">
+<AnchorPane prefHeight="617.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerVentanaPerfilTripulante">
    <children>
       <ImageView fitHeight="49.0" fitWidth="45.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -26,7 +26,7 @@
          </font>
       </Text>
       <Separator layoutY="68.0" prefHeight="8.0" prefWidth="1200.0" />
-      <Button fx:id="btnGuardar" layoutX="1096.0" layoutY="21.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Guardar" textFill="WHITE">
+      <Button fx:id="btnGuardar" layoutX="1096.0" layoutY="21.0" mnemonicParsing="false" onAction="#agregarNuevoTripulante" prefHeight="32.0" prefWidth="90.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Guardar" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -43,28 +43,28 @@
          <children>
             <ImageView fitHeight="25.0" fitWidth="22.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Icon%20persona%20verde.png" />
+                  <Image url="@../images/IconPersonaVerde.png" />
                </image>
             </ImageView>
-            <Text fill="#399053" layoutX="52.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información" wrappingWidth="106.3125">
+            <Text fill="#399053" layoutX="58.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información" wrappingWidth="119.91199493408203">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
             <Text layoutX="35.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre(s)" />
-            <TextField layoutX="147.0" layoutY="102.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <TextField fx:id="txtNombres" layoutX="147.0" layoutY="102.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
             <Text layoutX="35.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido(s)" />
-            <TextField layoutX="147.0" layoutY="152.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <TextField fx:id="txtApellidos" layoutX="147.0" layoutY="144.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
             <Text layoutX="35.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificación" />
-            <TextField layoutX="147.0" layoutY="202.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
-            <TextField layoutX="147.0" layoutY="252.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
-            <Text layoutX="35.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo Electrónico" />
-            <TextField layoutX="147.0" layoutY="306.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <TextField fx:id="txtId" layoutX="147.0" layoutY="202.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <TextField fx:id="txtEmail" layoutX="147.0" layoutY="252.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <Text layoutX="32.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo Electrónico" />
+            <TextField fx:id="txtDireccion" layoutX="147.0" layoutY="306.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
             <Text layoutX="35.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección" />
-            <DatePicker layoutX="149.0" layoutY="360.0" prefHeight="27.0" prefWidth="237.0" style="-fx-border-radius: 0; -fx-border-color: d5d3d3;" />
+            <DatePicker fx:id="txtFechaNacimiento" layoutX="149.0" layoutY="360.0" prefHeight="27.0" prefWidth="237.0" style="-fx-border-radius: 0; -fx-border-color: d5d3d3;" />
             <Text layoutX="35.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Nacimiento" />
             <Text layoutX="33.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estudios Realizados" />
-            <TextField layoutX="149.0" layoutY="411.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
+            <TextField fx:id="txtEstudiosRealizados" layoutX="149.0" layoutY="411.0" prefHeight="27.0" prefWidth="237.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: black; -fx-border-width: 1px; -fx-border-radius: 0; -fx-border-color: d5d3d3; -fx-border-width: 1px;" />
          </children>
       </AnchorPane>
       <TableView layoutX="443.0" layoutY="172.0" prefHeight="412.0" prefWidth="742.0" styleClass="column-header-background" stylesheets="@../style/Styles.css">
@@ -86,7 +86,7 @@
       </Text>
       <ImageView fitHeight="136.0" fitWidth="56.0" layoutX="1120.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/Icon%20tripulante.png" />
+            <Image url="@../images/IconTripulante.png" />
          </image>
       </ImageView>
    </children>
