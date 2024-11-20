@@ -8,4 +8,9 @@
   "identificacion" : "3465789",
   "correo" : "juan@gmail.com",
   "contrasenia" : "juan1234"
+}, {
+  "nombre" : "Michael",
+  "identificacion" : "1096670155",
+  "correo" : "Michael",
+  "contrasenia" : "123"
 } ]
