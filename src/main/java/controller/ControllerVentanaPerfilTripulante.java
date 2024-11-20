@@ -52,7 +52,7 @@ public class ControllerVentanaPerfilTripulante {
             mostrarAlerta("Por favor complete todos los campos");
         }
         else {
-            String nombreCompleto = txtNombres.getText() + txtApellidos.getText();
+            String nombreCompleto = txtNombres.getText() + " " + txtApellidos.getText();
             Tripulante nuevoTripulante = new Tripulante(txtId.getText(),nombreCompleto, txtDireccion.getText(),txtEmail.getText(), txtFechaNacimiento.getValue(), txtEstudiosRealizados.getText());
             RegistroGeneral.registrarPersona(nuevoTripulante);
             mostrarAlerta("Tripulante agregado con exito");
