@@ -20,15 +20,7 @@
       </ImageView>
       <Pane layoutX="-6.0" layoutY="85.0" prefHeight="49.0" prefWidth="1201.0" style="-fx-background-color: green;">
          <children>
-            <Button fx:id="btnListaTripulantes" layoutX="20.0" layoutY="5.0" mnemonicParsing="false" onAction="#abrirPerfilTripulante" prefHeight="39.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Lista de Tripulantes" textFill="#00ff55">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnAgregarTripulante" layoutX="241.0" layoutY="5.0" mnemonicParsing="false" onAction="#abrirVentanaAgregarTripulante" prefHeight="39.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Agregar Tripulante" textFill="#00ff55">
+            <Button fx:id="btnAgregarTripulante" layoutX="16.0" layoutY="5.0" mnemonicParsing="false" onAction="#abrirVentanaAgregarTripulante" prefHeight="39.0" prefWidth="175.0" style="-fx-background-radius: 5; -fx-text-fill: green; -fx-background-color: white; -fx-border-color: green;" text="Agregar Tripulante" textFill="#00ff55">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -95,7 +87,7 @@
       </AnchorPane>
       <AnchorPane layoutX="564.0" layoutY="230.0" prefHeight="450.0" prefWidth="488.0" style="-fx-background-color: eeeeee; -fx-border-style: solid; -fx-border-color: d5d3d3;">
          <children>
-            <ComboBox fx:id="comboBoxOrigen11" layoutX="26.0" layoutY="95.0" prefHeight="27.0" prefWidth="201.0" promptText="Seleccionar Piloto" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="comboBoxPiloto" layoutX="26.0" layoutY="95.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Seleccionar Piloto" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -108,7 +100,7 @@
             <Separator layoutX="4.0" layoutY="47.0" prefHeight="4.0" prefWidth="481.0" />
             <Text layoutX="26.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Piloto | Comandante de Vuelo" />
             <Text layoutX="262.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copiloto" />
-            <ComboBox fx:id="comboBoxOrigen111" layoutX="262.0" layoutY="95.0" prefHeight="27.0" prefWidth="201.0" promptText="Seleccionar Copiloto" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="comboBoxCopiloto" layoutX="262.0" layoutY="95.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Seleccionar Copiloto" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -119,38 +111,38 @@
                </font>
             </Text>
             <Text layoutX="26.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 1" />
-            <ComboBox fx:id="comboBoxOrigen112" layoutX="118.0" layoutY="182.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 1" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="aux1" layoutX="118.0" layoutY="182.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 1" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
             <Text layoutX="26.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auxiliar No. 2" wrappingWidth="70.6875" />
-            <ComboBox fx:id="comboBoxOrigen1121" layoutX="118.0" layoutY="221.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 2" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="aux2" layoutX="118.0" layoutY="221.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 2" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
-            <ComboBox fx:id="comboBoxOrigen11211" layoutX="118.0" layoutY="260.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 3" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="aux3" layoutX="118.0" layoutY="260.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 3" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
-            <ComboBox fx:id="comboBoxOrigen112111" layoutX="118.0" layoutY="298.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 4" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="aux4" layoutX="118.0" layoutY="298.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 4" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
-            <ComboBox fx:id="comboBoxOrigen1121111" layoutX="118.0" layoutY="338.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 5" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="aux5" layoutX="118.0" layoutY="338.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 5" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
-            <ComboBox fx:id="comboBoxOrigen11211111" layoutX="118.0" layoutY="376.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 6" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="aux6" layoutX="118.0" layoutY="376.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 6" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
-            <ComboBox fx:id="comboBoxOrigen112111111" layoutX="118.0" layoutY="415.0" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 7" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
+            <ComboBox fx:id="aux7" layoutX="118.0" layoutY="415.0" onAction="#mostrarListaTripulantes" prefHeight="27.0" prefWidth="201.0" promptText="Auxiliar 7" style="-fx-border-color: d5d3d3;" styleClass="arrow" stylesheets="@../style/Styles.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

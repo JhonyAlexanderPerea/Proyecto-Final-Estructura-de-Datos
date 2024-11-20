@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
@@ -15,7 +16,7 @@ public class ControllerVentanaFlota {
     private String tipoAeronave; // Variable para definir el tipo de aeronave
 
     public void initialize() {
-        tipoAeronave = "Boeing787";  // Dependiendo el tipoAeronave se mostrara la flota correspondiente
+        tipoAeronave = "Airbus320";  // Dependiendo el tipoAeronave se mostrara la flota correspondiente
         crearAsientos();
     }
 
@@ -212,5 +213,8 @@ public class ControllerVentanaFlota {
     }
     public void actualizarTipoAeronave(String tipoAeronave) {
         labelTipoAeronave.setText(tipoAeronave);  // Actualiza el texto del Label
+    }
+
+    public void abrirVentanaCompra(ActionEvent actionEvent) {
     }
 }
