@@ -3,6 +3,7 @@ package Model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -12,9 +13,9 @@ public  abstract class Persona {
     private String nombre;
     private String direccion;
     private String email;
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
 
-    public Persona(String id, String nombre, String direccion, String email, Date fechaNacimiento) {
+    public Persona(String id, String nombre, String direccion, String email, LocalDate fechaNacimiento) {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;

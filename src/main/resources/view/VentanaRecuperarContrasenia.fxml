@@ -28,8 +28,8 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField layoutX="153.0" layoutY="171.0" prefHeight="40.0" prefWidth="366.0" promptText="Email registrado" />
-      <Text layoutX="188.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingresa el correo electrónico con el que te registraste" />
+      <TextField layoutX="153.0" layoutY="188.0" prefHeight="40.0" prefWidth="366.0" promptText="Email registrado" />
+      <Text layoutX="170.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingresa el correo electrónico con el que te registraste:" />
       <TextField layoutX="153.0" layoutY="258.0" prefHeight="40.0" prefWidth="366.0" promptText="Nueva contraseña" />
       <TextField layoutX="153.0" layoutY="316.0" prefHeight="40.0" prefWidth="366.0" promptText="Confirme la nueva contraseña" />
       <Button fx:id="btnCancelar" layoutX="151.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#abrirVentanaLogin" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="CANCELAR" textFill="WHITE">
@@ -40,7 +40,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnCambiarContrasenia" layoutX="344.0" layoutY="389.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="CAMBIAR CONTRASEÑA" textFill="WHITE">
+      <Button fx:id="btnCambiarContrasenia" layoutX="344.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#cambiarContrasenia" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="CAMBIAR CONTRASEÑA" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

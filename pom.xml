@@ -85,6 +85,13 @@
             <version>2.13.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.13.3</version> <!-- Usa la misma versión de Jackson que ya estás usando -->
+        </dependency>
+
+
     </dependencies>
 
     <build>

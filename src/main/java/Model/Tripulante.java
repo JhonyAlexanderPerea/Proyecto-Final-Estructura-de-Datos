@@ -2,12 +2,12 @@ package Model;
 
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 @Data
-public abstract class Tripulante extends Persona{
+public class Tripulante extends Persona{
     private String estudiosRealizados;
 
-    public Tripulante(String id, String nombre, String direccion, String email, Date fechaNacimiento, String estudiosRealizados) {
+    public Tripulante(String id, String nombre, String direccion, String email, LocalDate fechaNacimiento, String estudiosRealizados) {
         super(id, nombre, direccion, email, fechaNacimiento);
         this.estudiosRealizados = estudiosRealizados;
     }

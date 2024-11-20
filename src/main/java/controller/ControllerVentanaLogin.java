@@ -1,6 +1,7 @@
 package controller;
 
-import Model.Registro;
+import Model.Administrador;
+import Model.RegistroGeneral;
 import javafx.scene.control.Hyperlink;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -17,6 +18,7 @@ import util.manejoVentanasUtil;
 import java.io.IOException;
 
 public class ControllerVentanaLogin {
+
 
     manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
 
@@ -39,13 +41,17 @@ public class ControllerVentanaLogin {
     // Método adicional para manejar el inicio de sesión
     @FXML
     void abrirVentanaPrincipal(MouseEvent event) throws IOException {
-        if (Registro.validarLogin(txtEmail.getText(),txtPassword.getText()))
+        if (RegistroGeneral.validarLoginAdministrador(txtEmail.getText(),txtPassword.getText()))
         {
             manejoVentanasUtil.cambiarVentana(event, "/view/VentanaPrincipal.fxml", "Uniquindio Airlines");
         }
         else
         {
-            AlertasUtil.mostrarAlerta("El usuario no se encuentra en la base de datos");
+            if (txtPassword.getText().equals("")|| txtEmail.getText().equals("") )
+            {
+                AlertasUtil.mostrarAlerta("Nombre de usuario o contraseña incorrectas.");
+            }
+            AlertasUtil.mostrarAlerta("El usuario no se encuentra en la base de datos.");
         }
     }
 
