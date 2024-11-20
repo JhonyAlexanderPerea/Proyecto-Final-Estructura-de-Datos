@@ -1,8 +1,0 @@
-[ {
-  "id" : "456789",
-  "nombre" : "juanperez",
-  "direccion" : "carrera 14 casa 24",
-  "email" : "juanp@gmail.com",
-  "fechaNacimiento" : [ 2016, 11, 14 ],
-  "estudiosRealizados" : "piloto"
-} ]

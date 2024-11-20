@@ -1,0 +1,45 @@
+[ {
+  "categoria" : "Administrador",
+  "nombre" : "jhony",
+  "identificacion" : "1293093",
+  "correo" : "jhony@gmail.com",
+  "contrasenia" : "juan123"
+}, {
+  "categoria" : "Administrador",
+  "nombre" : "juan",
+  "identificacion" : "3465789",
+  "correo" : "juan@gmail.com",
+  "contrasenia" : "juan1234"
+}, {
+  "categoria" : "Tripulante",
+  "id" : "456789",
+  "nombre" : "juan perez",
+  "direccion" : "carrera 14 casa 24",
+  "email" : "juanp@gmail.com",
+  "fechaNacimiento" : [ 2016, 11, 14 ],
+  "estudiosRealizados" : "piloto"
+}, {
+  "categoria" : "Tripulante",
+  "id" : "89090",
+  "nombre" : "alex cardona",
+  "direccion" : "casa # 34",
+  "email" : "alexac@gmail.com",
+  "fechaNacimiento" : [ 1987, 3, 4 ],
+  "estudiosRealizados" : "copiloto"
+}, {
+  "id" : "567890'",
+  "fechaNacimiento" : [ 2024, 11, 22 ],
+  "email" : "mateom@gmail.com",
+  "nombre" : "mateo muñoz",
+  "categoria" : "Tripulante",
+  "direccion" : "carrera 16#13",
+  "estudiosRealizados" : "Piloto"
+}, {
+  "id" : "567890'",
+  "fechaNacimiento" : [ 2024, 11, 22 ],
+  "email" : "mateom@gmail.com",
+  "nombre" : "Maria muñoz",
+  "categoria" : "Tripulante",
+  "direccion" : "carrera 16#13",
+  "estudiosRealizados" : "Piloto"
+} ]
