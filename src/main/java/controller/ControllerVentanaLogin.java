@@ -2,6 +2,7 @@ package controller;
 
 import Model.Administrador;
 import Model.RegistroGeneral;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Hyperlink;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,12 +20,10 @@ import java.io.IOException;
 
 public class ControllerVentanaLogin {
 
-
     manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
 
     @FXML
     public TextField txtEmail; // Campo de texto para el email
-
 
     @FXML
     private PasswordField txtPassword;// Campo de texto para la contraseña
@@ -34,6 +33,9 @@ public class ControllerVentanaLogin {
 
     @FXML
     private Button btnRegistrate; // Botón para registrarse
+
+    @FXML
+    private Button btnSalir; // Botón para salir al menu principal
 
     @FXML
     private Hyperlink linkOlvideContrasena;
@@ -62,5 +64,9 @@ public class ControllerVentanaLogin {
 
     public void abrirVentanaRegistro(MouseEvent event) {
         manejoVentanasUtil.cambiarVentana(event, "/view/VentanaRegistrar.fxml", "Registro");
+    }
+
+    public void abrirVentanaPrincipalCompra(ActionEvent event) {
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaCompraPrincipal.fxml", "Compra de Tiquetes");
     }
 }

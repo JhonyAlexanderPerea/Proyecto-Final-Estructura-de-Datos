@@ -1,5 +1,6 @@
 package controller;
 
+import enums.ServicioViaje;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
@@ -15,7 +16,7 @@ public class ControllerVentanaCompraPrincipal {
     @FXML
     private ComboBox<String> comboBoxDestino;
     @FXML
-    private ComboBox<String> comboBoxServicio;
+    private ComboBox<ServicioViaje> comboBoxServicio;
 
     manejoVentanasUtil manejoVentanasUtil = new manejoVentanasUtil();
 
@@ -25,10 +26,15 @@ public class ControllerVentanaCompraPrincipal {
         // Agregar opciones al ComboBox
         comboBoxOrigen.getItems().addAll("CDMX");
         comboBoxDestino.getItems().addAll("Monterrey", "Cancún","Buenos Aires","Los Ángeles","Bogotá","Panamá");
-        comboBoxServicio.getItems().addAll("Clase Ejecutiva","Clase Económica");
+        comboBoxCategorias.setItems(FXCollections.observableArrayList(Categoria.values()));
     }
 
     public void abrirVentanaFlota(ActionEvent actionEvent) {
         manejoVentanasUtil.cambiarVentana(actionEvent, "/view/VentanaFlota.fxml", "Flota");
     }
+
+    public void abrirVentanaLogin(ActionEvent actionEvent) {
+        manejoVentanasUtil.cambiarVentana(actionEvent, "/view/VentanaLogin.fxml", "Login");
+    }
+
 }
