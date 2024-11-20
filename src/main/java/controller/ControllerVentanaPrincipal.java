@@ -18,10 +18,15 @@ public class ControllerVentanaPrincipal {
 
     @FXML
     private void abrirVentanaTripulante(MouseEvent event) {
-        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaTripulante.fxml", "Tripulante");
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaTripulante.fxml", "Gestión de Tripulación");
     }
 
     public void abrirVentanaLogin(MouseEvent mouseEvent) {
         manejoVentanasUtil.cambiarVentana(mouseEvent, "/view/VentanaLogin.fxml", "Login");
     }
+    @FXML
+    void abrirVentanaFlotas(MouseEvent event) {
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaFlotas.fxml", "Gestión de Flotas");
+    }
+
 }

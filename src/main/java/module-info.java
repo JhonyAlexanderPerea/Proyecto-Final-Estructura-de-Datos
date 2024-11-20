@@ -5,6 +5,7 @@ module app {
     requires jakarta.mail;
     requires org.apache.logging.log4j;
     requires org.apache.logging.log4j.core;
+    requires com.fasterxml.jackson.datatype.jsr310;
     requires com.fasterxml.jackson.databind;
     requires java.desktop;
 

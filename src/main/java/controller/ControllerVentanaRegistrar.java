@@ -1,23 +1,15 @@
 package controller;
 
 import Model.Administrador;
-import Model.carroEmbarque;
-import javafx.event.ActionEvent;
+import Model.RegistroGeneral;
 import javafx.scene.control.Hyperlink;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import util.manejoVentanasUtil;
-import Model.Registro;
-
-import javax.swing.*;
 import java.io.IOException;
 
 import static util.AlertasUtil.mostrarAlerta;
@@ -45,11 +37,13 @@ public class ControllerVentanaRegistrar {
     private Hyperlink linkVolverLogin; // Hyperlink para volver a la ventana de inicio de sesión
 
 
+
     public void abrirVentanaLogin(MouseEvent mouseEvent) {
         manejoVentanasUtil.cambiarVentana(mouseEvent, "/view/VentanaLogin.fxml", "Login");
     }
 
     public void registrarAdmin(MouseEvent mouseEvent) throws IOException {
+        String rutaArchivo = "/resources/ListaAdmins/listaAdmins.json";
         if (txtNombre.getText().isEmpty() || txtCorreo.getText().isEmpty() ||
                 txtId.getText().isEmpty() || txtContrasenia.getText().isEmpty()) {
 
@@ -63,7 +57,7 @@ public class ControllerVentanaRegistrar {
                     txtContrasenia.getText()
             );
 
-            Registro.registrarAdmin(administrador);
+            RegistroGeneral.registrarPersona(administrador);
             mostrarAlerta("Administrador registrado exitosamente");
             logger.info("Administrador registrado exitosamente");
         }

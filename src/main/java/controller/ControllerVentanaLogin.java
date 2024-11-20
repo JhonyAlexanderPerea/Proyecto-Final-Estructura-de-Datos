@@ -1,7 +1,7 @@
 package controller;
 
 import Model.Administrador;
-import Model.Registro;
+import Model.RegistroGeneral;
 import javafx.scene.control.Hyperlink;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -41,7 +41,7 @@ public class ControllerVentanaLogin {
     // Método adicional para manejar el inicio de sesión
     @FXML
     void abrirVentanaPrincipal(MouseEvent event) throws IOException {
-        if (Registro.validarLogin(txtEmail.getText(),txtPassword.getText()))
+        if (RegistroGeneral.validarLoginAdministrador(txtEmail.getText(),txtPassword.getText()))
         {
             manejoVentanasUtil.cambiarVentana(event, "/view/VentanaPrincipal.fxml", "Uniquindio Airlines");
         }
