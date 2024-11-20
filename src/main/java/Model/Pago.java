@@ -1,7 +1,6 @@
 package Model;
 
 import enums.ServicioViaje;
-import enums.Clase;
 import enums.TipoViaje;
 
 import lombok.Data;

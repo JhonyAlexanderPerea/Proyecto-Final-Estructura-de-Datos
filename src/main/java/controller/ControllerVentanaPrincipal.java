@@ -26,7 +26,7 @@ public class ControllerVentanaPrincipal {
     }
     @FXML
     void abrirVentanaFlotas(MouseEvent event) {
-        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaFlotas.fxml", "Gestión de Flotas");
+        manejoVentanasUtil.cambiarVentana(event, "/view/VentanaFlota.fxml", "Gestión de Flotas");
     }
 
 }
